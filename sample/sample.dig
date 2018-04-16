@@ -1,0 +1,9 @@
+_export:
+  plugin:
+    repositories:
+      - file://${repos}
+    dependencies:
+      - io.digdag.plugin:digdag-plugin-mysql:0.1.0
+
++start:
+  echo>: Mysql plugin test start
