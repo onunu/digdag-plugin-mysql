@@ -5,6 +5,9 @@ import io.digdag.client.config.Config;
 import io.digdag.spi.Operator;
 import io.digdag.spi.OperatorContext;
 import io.digdag.spi.OperatorFactory;
+import io.digdag.spi.OperatorProvider;
+import io.digdag.spi.Plugin;
+import io.digdag.spi.TemplateEngine;
 
 import java.util.Arrays;
 import java.util.List;
