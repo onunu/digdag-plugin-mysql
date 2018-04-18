@@ -10,12 +10,10 @@ import io.digdag.standards.operator.jdbc.AbstractJdbcJobOperator;
 
 public class MysqlOperatorFactory implements OperatorFactory {
     private static final String OPERATOR_TYPE = "mysql";
-    private final Config systemConfig;
     private final TemplateEngine templateEngine;
 
     @Inject
-    public MysqlOperatorFactory(Config systemConfig, TemplateEngine templateEngine) {
-        this.systemConfig = systemConfig;
+    public MysqlOperatorFactory(TemplateEngine templateEngine) {
         this.templateEngine = templateEngine;
     }
 
@@ -26,12 +24,12 @@ public class MysqlOperatorFactory implements OperatorFactory {
 
     @Override
     public MysqlOperator newOperator(OperatorContext context) {
-        return new MysqlOperator(systemConfig, context, templateEngine);
+        return new MysqlOperator(context, templateEngine);
     }
 
     static class MysqlOperator extends AbstractJdbcJobOperator<MysqlConnectionConfig> {
-        MysqlOperator(Config systemConfig, OperatorContext context, TemplateEngine templateEngine) {
-            super(systemConfig, context, templateEngine);
+        MysqlOperator(OperatorContext context, TemplateEngine templateEngine) {
+            super(context, templateEngine);
         }
 
         @Override
