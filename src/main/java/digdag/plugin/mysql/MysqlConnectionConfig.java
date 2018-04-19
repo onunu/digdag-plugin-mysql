@@ -53,6 +53,6 @@ public abstract class MysqlConnectionConfig extends AbstractJdbcConnectionConfig
 
     @Override
     public String toString() {
-        return url();;
+        return url();
     }
 }
