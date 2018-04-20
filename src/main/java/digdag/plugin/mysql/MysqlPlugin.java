@@ -27,10 +27,11 @@ public class MysqlPlugin implements Plugin {
     public static class MysqlOperatorProvider implements OperatorProvider {
         @Inject
         protected TemplateEngine templateEngine;
+        protected Config systemConfig;
 
         @Override
         public List<OperatorFactory> get() {
-            return Arrays.asList(new MysqlOperatorFactory(templateEngine));
+            return Arrays.asList(new MysqlOperatorFactory(systemConfig, templateEngine));
         }
     }
 }

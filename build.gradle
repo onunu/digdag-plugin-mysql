@@ -14,7 +14,7 @@ apply plugin: 'net.ltgt.apt'
 group = 'io.digdag.plugin'
 version = '0.1.0'
 
-def digdagVersion = '0.9.12'
+def digdagVersion = '0.9.24'
 
 repositories {
     mavenCentral()
