@@ -7,3 +7,10 @@ _export:
 
 +start:
   echo>: Mysql plugin test start
+
++test:
+  mysql>:
+  host: localhost
+  user: root
+  database: mysql
+  query: select version()
